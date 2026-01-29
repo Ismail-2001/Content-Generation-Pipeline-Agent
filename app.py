@@ -10,6 +10,11 @@ st.set_page_config(
     layout="wide"
 )
 
+# Authentication Check
+from auth import check_authentication
+if not check_authentication():
+    st.stop()
+
 # Custom CSS for Premium Look
 st.markdown("""
 <style>
